@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Room</title>
+  <link rel="stylesheet" href="room_style.css">
+</head>
+ <body>
+<div class="room-container">
+    <!-- 1. 배경 이미지 -->
+    <img src="PNG/Background illustration.png" class="background-img" alt="내 책상">
+
+    <!-- 2. 메뉴 아이콘들 (책상 위 물건처럼 배치) -->
+    <!-- 굿즈샵 (마카롱) -->
+    <div class="item" onclick="openModal('goods')">
+        <img src="PNG/01_Macaron.png" alt="굿즈샵">
+        <span class="label">굿즈샵</span>
+    </div>
+
+    <!-- 디자인 (팔레트) -->
+    <div class="item" onclick="openModal('design')">
+        <img src="PNG/01_Palette.png" alt="디자인">
+        <span class="label">디자인</span>
+    </div>
+
+    <!-- 영상 (별) -->
+    <div class="item" onclick="openModal('video')">
+        <img src="PNG/01_Twinkling Star.png" alt="영상">
+        <span class="label">영상</span>
+    </div>
+    
+    <!-- 프로필 (노트) -->
+    <div class="item" onclick="openModal('about')">
+        <img src="PNG/01_Notepad.png" alt="프로필">
+        <span class="label">About Me</span>
+    </div>
+</div>
+
+<!-- 3. 내용이 뜰 팝업창들 (평소엔 숨겨짐) -->
+<div id="modal-goods" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('goods')">&times;</span>
+        <h2>🍰 완두의 굿즈샵</h2>
+        <p>응딩이빵딩이의 귀여운 굿즈들을 만나보세요!</p>
+        <!-- 여기에 굿즈 이미지나 마플샵 링크를 넣으면 돼 -->
+        <a href="https://marpple.shop/kr/butty_tokky" target="_blank">마플샵 구경가기</a>
+    </div>
+</div>
+</body>
+<script src="JavaScript.js"></script>
+</html>

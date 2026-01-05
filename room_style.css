@@ -1,0 +1,63 @@
+/* 방 전체 컨테이너 */
+.room-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* 너무 커지지 않게 제한 */
+    margin: 0 auto;
+}
+
+/* 배경 이미지 */
+.background-img {
+    width: 100%;
+    display: block;
+}
+
+/* 아이콘(물건) 공통 스타일 */
+.item {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.item:hover {
+    transform: scale(1.1); /* 마우스 올리면 살짝 커짐 */
+}
+
+.item img {
+    width: 80px; /* 아이콘 크기 조절 */
+}
+
+/* 각 아이콘의 위치 지정 (top, left 값을 조절해서 책상 위에 배치해봐!) */
+.item:nth-child(2) { top: 40%; left: 20%; } /* 마카롱 위치 */
+.item:nth-child(3) { top: 30%; left: 50%; } /* 팔레트 위치 */
+.item:nth-child(4) { top: 20%; left: 70%; } /* 별 위치 */
+.item:nth-child(5) { top: 60%; left: 80%; } /* 노트 위치 */
+
+/* 팝업창 스타일 (아까 알려준 코드와 비슷해) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 60%;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
